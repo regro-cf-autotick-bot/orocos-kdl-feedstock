@@ -1,5 +1,5 @@
 {% set name = "orocos-kdl" %}
-{% set version = "1.5.3" %}
+{% set version = "1.5.4" %}
 
 package:
   name: {{ name }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://github.com/orocos/orocos_kinematics_dynamics/archive/{{ version }}.tar.gz
-  sha256: 3895eed1b51a6803c79e7ac4acd6a2243d621b887ac26a1a6b82a86a1131c3b6
+  sha256: b47c75b03d5980a8b3a5382ab1176ae552f2f5418ad42b0e530a4178e3e1c301
   patches:
     - python_orocos_kdl.patch
     - remove_version_symlinks.patch
     - eigen5_targets.patch
 
 build:
-  number: 2
+  number: 0
 
 outputs:
   - name: orocos-kdl
